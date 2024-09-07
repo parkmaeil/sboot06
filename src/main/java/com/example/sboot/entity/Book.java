@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Setter
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Book {
+public class Book { //  BookDTO
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,6 +24,12 @@ public class Book {
     private int price;
     private String author;
     private int page;
+    // 추가
+    private LocalDateTime createdAt;
+    @PrePersist
+    public void onCreate(){
+        this.createdAt=LocalDateTime.now();
+    }
 
     // 책(1) : 리뷰(N)
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)

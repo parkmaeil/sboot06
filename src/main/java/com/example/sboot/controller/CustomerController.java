@@ -3,6 +3,7 @@ package com.example.sboot.controller;
 import com.example.sboot.entity.Customer;
 import com.example.sboot.service.CustomerService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/customer")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CustomerController {
 
     private final CustomerService customerService;

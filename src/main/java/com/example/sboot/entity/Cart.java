@@ -1,5 +1,6 @@
 package com.example.sboot.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,5 +30,5 @@ public class Cart {
     // 장바구니(N) : 고객(1)
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
-    private Customer customer;
+     private Customer customer;
 }

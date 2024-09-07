@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Reviews</title>
+    <script th:src="@{/js/rest.js}"></script>
+ </head>
+<body onload="loadJson()">
+<h2>Customer Reviews</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Customer Name</th>
+        <th>Reviews</th>
+    </tr>
+    </thead>
+    <tbody id="customerReviews">
+    </tbody>
+</table>
+
+</body>
+</html>

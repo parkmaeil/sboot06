@@ -1,0 +1,60 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 2px solid #4CAF50; /* Make the border a little thicker */
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50; /* Green background for the header */
+    color: white;
+    text-align: center;
+}
+
+/* Style for customer name cells */
+.customer-name {
+    background-color: #e9f5e9; /* Keep the green background for customer name */
+    color: black; /* White text for customer name */
+    font-weight: bold; /* Bold font for customer name */
+    text-align: center; /* Center align the customer names */
+}
+
+/* Style for reviews */
+.reviews {
+    background-color: #e9f5e9; /* Light green background for the reviews */
+    color: black; /* Black text for reviews */
+    padding-left: 20px; /* Add some left padding for the reviews */
+}
+
+td ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+td ul li {
+    margin: 5px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Reviews</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <!-- Link to the external JavaScript file -->
+    <script th:src="@{/js/rest.js}"></script>
+</head>
+<body onload="loadJson()"> <!-- Use onload to call loadJson() after page loads -->
+
+<!-- Add an image (logo) at the top of the page -->
+<img th:src="@{/images/logo.jpg}" alt="Company Logo">
+
+<h2>Customer Reviews</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Customer Name</th>
+        <th>Reviews</th>
+    </tr>
+    </thead>
+    <tbody id="customerReviews">
+    </tbody>
+</table>
+
+</body>
+</html>

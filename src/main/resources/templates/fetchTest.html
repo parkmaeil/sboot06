@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Item List</title>
+</head>
+<body>
+
+<h1>Fetch API Example</h1>
+<form id="dataForm">
+    <input type="text" id="inputData" placeholder="Enter some data">
+    <button type="button" onclick="submitData()">Submit</button>
+</form>
+
+<p id="responseMessage">여기에 응답 데이터가 출력</p>
+
+<script>
+    function submitData() {
+        const data = document.getElementById("inputData").value;
+
+        fetch('/submitData', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data) // {  data : "wqwqwqwqw"    }
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("responseMessage").innerHTML = "<font color='red'>"+data+"</font>";
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+
+</body>
+</html>

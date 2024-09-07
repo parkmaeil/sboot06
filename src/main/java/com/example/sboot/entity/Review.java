@@ -1,5 +1,6 @@
 package com.example.sboot.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,5 +32,5 @@ public class Review {
     // 리뷰(N) : 책(1)
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id", nullable = false) // FK
-    private Book book; // PK(id)
+private Book book; // PK(id)
 }
